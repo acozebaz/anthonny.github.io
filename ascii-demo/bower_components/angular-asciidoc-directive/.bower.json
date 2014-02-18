@@ -1,0 +1,42 @@
+{
+  "name": "angular-asciidoc-directive",
+  "authors": [
+    "Anthonny Quérouil <anthonny.querouil@gmail.com>"
+  ],
+  "main": "dist/asciidoc.all.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "tmp",
+    "asciidoctorjs",
+    "src",
+    "README.md",
+    "karma.conf.js"
+  ],
+  "dependencies": {
+    "angular": ">=1.2.6"
+  },
+  "devDependencies": {
+    "angular-mocks": ">=1.2.6",
+    "angular-scenario": ">=1.2.6",
+    "angular-ui-ace": "bower"
+  },
+  "resolutions": {
+    "angular": ">=1.2.6"
+  },
+  "homepage": "https://github.com/anthonny/angular-asciidoc-directive",
+  "_release": "43a7b27782",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "43a7b2778288b7b1892b4aa0f1c6e7cb33c09f98"
+  },
+  "_source": "git://github.com/anthonny/angular-asciidoc-directive.git",
+  "_target": "*",
+  "_originalSource": "angular-asciidoc-directive",
+  "_direct": true
+}
