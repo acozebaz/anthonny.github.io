@@ -29,14 +29,14 @@
     "angular": ">=1.2.6"
   },
   "homepage": "https://github.com/anthonny/angular-asciidoc-directive",
-  "_release": "43a7b27782",
+  "_release": "321f3c85f2",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "43a7b2778288b7b1892b4aa0f1c6e7cb33c09f98"
+    "commit": "321f3c85f27f70b0f66d17573a00a2968ae581df"
   },
-  "_source": "git://github.com/anthonny/angular-asciidoc-directive.git",
-  "_target": "*",
-  "_originalSource": "angular-asciidoc-directive",
+  "_source": "https://github.com/anthonny/angular-asciidoc-directive.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/anthonny/angular-asciidoc-directive.git",
   "_direct": true
 }
