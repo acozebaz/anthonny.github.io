@@ -12,15 +12,22 @@ Dan Allen <thedoc@asciidoctor.org>
 :library: Asciidoctor
 :idprefix:
 :numbered:
-:imagesdir: .
-:toc:
+:imagesdir: images
+:toc: manual
 :css-signature: demo
+:toc-placement: preamble
 //:max-width: 800px
 //:doctype: book
 //:sectids!:
 
-[role='lead']
-This is a demonstration of {library}. And this is the preamble of this document.
+This is a demonstration of {library} {asciidoctor-version}.
+And this is the preamble of this document.
+
+ifdef::env-github[]
+++++
+<a name="purpose"></a>
+++++
+endif::env-github[]
 
 [[purpose]]
 .Purpose
@@ -32,8 +39,8 @@ TIP: If you want the output to look familiar, copy (or link) the AsciiDoc styles
 
 NOTE: Items marked with TODO are either not yet supported or a work in progress.
 
-[[first,First Steps]]
-== First Steps with http://asciidoc.org[AsciiDoc]
+[[1-first-steps-with-asciidoc]]
+== First Steps with AsciiDoc
 
 .Inline markup
 * single quotes around a phrase place 'emphasis'
@@ -42,12 +49,8 @@ NOTE: Items marked with TODO are either not yet supported or a work in progress.
 * double underscore around a __sub__string in a word emphasizes that substring
 * use carrots around characters to make them ^super^script
 * use tildes around characters to make them ~sub~script
-ifdef::basebackend-html[]
-* to pass through +++<u>HTML</u>+++ directly, surround the text with triple plus
-endif::basebackend-html[]
-ifdef::basebackend-docbook[]
-* to pass through +++<constant>XML</constant>+++ directly, surround the text with triple plus
-endif::basebackend-docbook[]
+ifdef::basebackend-html[* to pass through +++<b>HTML</b>+++ directly, surround the text with triple plus]
+ifdef::basebackend-docbook[* to pass through +++<constant>XML</constant>+++ directly, surround the text with triple plus]
 
 // separate two adjacent lists using a line comment (only the leading // is required)
 
@@ -75,6 +78,12 @@ and continue typing on the next line.
 
 * to have
 * four items
+
+ifdef::env-github[]
+++++
+<a name="ordered"></a>
+++++
+endif::env-github[]
 
 [[ordered]]
 .Ordered lists
@@ -107,7 +116,11 @@ written on two lines
 ....
 with this literal text
 ....
-+
+
+* first level
+
+ with more literal text
+
 ** second level
 *** third level
 - fourth level
@@ -128,7 +141,7 @@ We'll be right with you...
 after this brief interruption.
 ////
 
-== We're back!
+== ...and we're back!
 
 Want to see a image:tiger.png[Tiger]?
 
@@ -137,26 +150,48 @@ Do you feel safer with the tiger in a box?
 .Tiger in a box
 image::tiger.png[]
 
-include::include.asciidoc[]
+include::include.adoc[]
 
-.Asciidoctor usage example, should contain 3 lines
-[source, ruby]
-----
-doc = Asciidoctor::Document.new("*This* is it!", :header_footer => false)
+.Asciidoctor usage example. The listing should contain 5 lines.
+[source,ruby]
+--
+require 'asciidoctor'
+
+doc = Asciidoctor.load '*This* is http://asciidoc.org[AsciiDoc]!', header_footer: true
 
 puts doc.render
-----
+--
 
-// FIXME: use ifdef to show output according to backend
-Here's what it outputs (using the built-in templates):
-
-....
-<div class="paragraph">
-  <p><strong>This</strong> is it!</p>
+// TODO: Use ifdef to show output according to current backend
+.Output of Asciidoctor usage example
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Asciidoctor 0.1.4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untitled</title>
+<link rel="stylesheet" href="./asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
 </div>
-....
+<div id="content">
+<div class="paragraph">
+<p><strong>This</strong> is <a href="http://asciidoc.org">AsciiDoc</a>!</p>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2014-01-28 20:11:37 MST
+</div>
+</div>
+</body>
+</html>
+```
 
-=== ``Quotes''
+=== Block Quotes and ``Smart'' Ones
 
 ____
 AsciiDoc is 'so' *powerful*!
@@ -175,16 +210,18 @@ When you have eliminated all which is impossible, then whatever remains,
 however improbable, must be the truth.
 ____
 
+``Get moving!'' he shouted.
+
 Getting Literal [[literally]]
 -----------------------------
 
- Want to get literal? Just prefix a line with a space (just one will do).
+ Want to get literal? Just prefix a line with a space (just 1 space will do).
 
 ....
 I'll join that party, too.
 ....
 
-We forgot to mention in <<numbered>> that you can change the numbering style.
+We forgot to mention in <<ordered>> that you can change the numbering style.
 
 .. first item (yeah!)
 .. second item, looking `so mono`
@@ -205,7 +242,7 @@ Go to this URL to learn more about it:
 
 * http://asciidoc.org
 
-Or you could return to the xref:first[] or <<purpose,Purpose>>.
+Or you could return to the xref:1-first-steps-with-asciidoc[] or <<purpose,Purpose>>.
 =====
 
 Here's a reference to the definition of <<another_term>>, in case you forgot it.
