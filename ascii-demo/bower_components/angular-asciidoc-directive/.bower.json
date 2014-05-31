@@ -23,20 +23,23 @@
   "devDependencies": {
     "angular-mocks": ">=1.2.6",
     "angular-scenario": ">=1.2.6",
-    "angular-ui-ace": "bower"
+    "angular-ui-ace": "bower",
+    "jquery": "~2.1.0",
+    "sizzle": "~1.10.16",
+    "angular-dropfile-directive": "https://github.com/anthonny/angular-dropfile-directive.git#master",
+    "asciidoctor.js": "v1.5.0-preview.7"
   },
   "resolutions": {
     "angular": ">=1.2.6"
   },
   "homepage": "https://github.com/anthonny/angular-asciidoc-directive",
-  "_release": "321f3c85f2",
+  "_release": "635b6aa2b0",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "321f3c85f27f70b0f66d17573a00a2968ae581df"
+    "commit": "635b6aa2b018c27e47c14465d784050898d0b4d3"
   },
   "_source": "https://github.com/anthonny/angular-asciidoc-directive.git",
   "_target": "master",
-  "_originalSource": "https://github.com/anthonny/angular-asciidoc-directive.git",
-  "_direct": true
+  "_originalSource": "https://github.com/anthonny/angular-asciidoc-directive.git"
 }

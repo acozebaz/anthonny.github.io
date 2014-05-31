@@ -1,6 +1,6 @@
 {
   "name": "angular-asciidoc-directive",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "authors": [
     "Anthonny Quérouil <anthonny.querouil@gmail.com>"
   ],
@@ -24,7 +24,11 @@
   "devDependencies": {
     "angular-mocks": ">=1.2.6",
     "angular-scenario": ">=1.2.6",
-    "angular-ui-ace": "bower"
+    "angular-ui-ace": "bower",
+    "jquery": "~2.1.0",
+    "sizzle": "~1.10.16",
+    "angular-dropfile-directive": "https://github.com/anthonny/angular-dropfile-directive.git#master",
+    "asciidoctor.js": "v1.5.0-preview.7"
   },
   "resolutions": {
     "angular": ">=1.2.6"

@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
+    "angular-dropfile-directive": "https://github.com/anthonny/angular-dropfile-directive.git#master",
     "angular-asciidoc-directive": "https://github.com/anthonny/angular-asciidoc-directive.git#master",
     "angular-ui-ace": "bower",
     "sizzle": "~1.10.18",

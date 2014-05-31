@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 	<title>Demo directive AsciiDoc</title>
-	<link rel="stylesheet" href="../dist/asciidoctor.css" />
+	<link rel="stylesheet" href="asciidoctor.css" />
 	<style type="text/css">
 		.ace_editor { 
 			position: fixed !important;
@@ -22,12 +22,18 @@
 			padding: 15px;		
 			overflow-y: auto;
 		}
+
+		#toc {
+			position: relative !important;
+		}
 	</style>
 </head>
 <body data-ng-app="demo">
-	<div class="pure-g-r" ng-controller="demo as demo" ng-init="demo.readonly=true">	
-		<div ui-ace="demo.aceOption" ng-model="demo.ascii" class="pure-u-1-2" ></div>
-		<div asciidoc="demo.ascii" asciidoc-opts="demo.asciidocOpts" asciidoc-no-watch="demo.readonly" asciidoc-transformer="demo.asciiTransformer" class="viewer" ></div>
+
+	<div  data-ng-controller="demo as demo" data-ng-init="demo.readonly=false">
+
+		<section ui-ace="demo.aceOption" data-ng-model="demo.ascii" dropfile ></section>
+		<div asciidoc="demo.ascii" asciidoc-opts="demo.asciidocOpts" asciidoc-no-watch="demo.readonly" asciidoc-post-processor="demo.asciiPostProcessor" class="viewer" ></div>
 	</div>
 
 	<script src="../bower_components/ace-builds/src-min-noconflict/ace.js"></script>
@@ -35,6 +41,7 @@
 	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="../bower_components/angular/angular.js"></script>
 	<script src="../bower_components/angular-ui-ace/ui-ace.js"></script>
+	<script src="../bower_components/angular-dropfile-directive/dist/dropfile.all.js"></script>
 	<script src="../dist/asciidoc.all.js"></script>
 	<script src="demo.js"></script>
 </body>
