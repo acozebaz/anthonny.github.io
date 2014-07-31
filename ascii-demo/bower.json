@@ -16,9 +16,9 @@
   ],
   "dependencies": {
     "angular-dropfile-directive": "https://github.com/anthonny/angular-dropfile-directive.git#master",
-    "angular-asciidoc-directive": "https://github.com/anthonny/angular-asciidoc-directive.git#master",
     "angular-ui-ace": "bower",
     "sizzle": "~1.10.18",
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "angular-asciidoc-directive": "~0.1.1"
   }
 }

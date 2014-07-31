@@ -1,5 +1,6 @@
 {
   "name": "angular-asciidoc-directive",
+  "version": "0.1.1",
   "authors": [
     "Anthonny Quérouil <anthonny.querouil@gmail.com>"
   ],
@@ -27,19 +28,17 @@
     "jquery": "~2.1.0",
     "sizzle": "~1.10.16",
     "angular-dropfile-directive": "https://github.com/anthonny/angular-dropfile-directive.git#master",
-    "asciidoctor.js": "v1.5.0-preview.7"
-  },
-  "resolutions": {
-    "angular": ">=1.2.6"
+    "asciidoctor.js": "v1.5.0-rc.2"
   },
   "homepage": "https://github.com/anthonny/angular-asciidoc-directive",
-  "_release": "635b6aa2b0",
+  "_release": "0.1.1",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "635b6aa2b018c27e47c14465d784050898d0b4d3"
+    "type": "version",
+    "tag": "0.1.1",
+    "commit": "ca0a183aea08adcdbff44393cc863645c3b998a7"
   },
-  "_source": "https://github.com/anthonny/angular-asciidoc-directive.git",
-  "_target": "master",
-  "_originalSource": "https://github.com/anthonny/angular-asciidoc-directive.git"
+  "_source": "git://github.com/anthonny/angular-asciidoc-directive.git",
+  "_target": "~0.1.1",
+  "_originalSource": "angular-asciidoc-directive",
+  "_direct": true
 }
