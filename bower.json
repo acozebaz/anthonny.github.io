@@ -1,0 +1,16 @@
+{
+  "name": "wip",
+  "version": "0.0.0",
+  "homepage": "https://github.com/anthonny/anthonny.github.io",
+  "authors": [
+    "Anthonny Quérouil <anthonny.querouil@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
