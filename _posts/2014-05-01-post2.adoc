@@ -29,8 +29,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 :uri-opal-contributors: https://github.com/opal/opal/graphs/contributors
 :uri-asciidoctor-1-5-0: http://asciidoctor.org/news/2014/08/12/asciidoctor-1-5-0-released/#spotlight-asciidoctorjs
 
-The release train is on the move! Version 1.5.0 of Asciidoctor.js has been released and is now available in {uri-bower}[Bower] and {uri-npm}[npm].
-This release is an important step toward making Asciidoctor.js widely available to the JavaScript ecosystem.
+The first commit test !
 
 image::bower-npm-logos.png[Bower and npm,225,100,role=right]
 
